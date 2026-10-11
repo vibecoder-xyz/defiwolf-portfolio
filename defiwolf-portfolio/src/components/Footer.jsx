@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <h4 className="text-2xl sm:text-4xl font-black uppercase hero-heading mb-2">{footer.heading}</h4>
           <p className="text-sm sm:text-base font-light text-mist/60">{footer.subtext}</p>
-          <a href={`mailto:${email}`} className="inline-block mt-3 text-sm sm:text-base text-wolf-light hover:text-white transition-colors">{email}</a>
+          <a href={`mailto:${email}`} className="inline-block mt-3 text-sm sm:text-base text-mist underline underline-offset-4 hover:text-muted transition-colors">{email}</a>
         </div>
         <ContactButton label={footer.button} onClick={() => { window.location.href = `mailto:${email}`; }} />
       </div>

@@ -2,7 +2,7 @@
 export const ContactButton = ({ onClick, label, className = "" }) => (
   <button
     onClick={onClick}
-    className={`contact-btn-bg rounded-full text-white font-medium uppercase tracking-widest px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-xs sm:text-sm md:text-base transition-transform hover:scale-105 active:scale-95 duration-200 cursor-pointer flex items-center justify-center gap-2 ${className}`}
+    className={`contact-btn-bg rounded-full font-medium uppercase tracking-widest px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-xs sm:text-sm md:text-base transition-transform hover:scale-105 active:scale-95 duration-200 cursor-pointer flex items-center justify-center gap-2 ${className}`}
   >
     <span>{label}</span>
   </button>

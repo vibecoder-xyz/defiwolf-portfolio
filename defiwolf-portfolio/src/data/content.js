@@ -16,17 +16,14 @@ export const content = {
 
   marquee: ["React", "Tailwind", "Prompt Design", "Claude", "Vibe Coding", "Web3", "Base", "Animation", "UI/UX", "Deploy Fast"],
 
-  about: {
+   about: {
     heading: "About me",
     body: "I'm a web developer who fell for prompt engineering and never looked back. I use AI to move at the speed of thought, and I use real development skills to make sure what I ship is clean, fast, and built to last. Let's make something bold.",
     button: "Contact Me",
-    // Corner 3D graphics carried over from the source file (remote URLs, not yours). Replace, or set to null to remove.
-    decor: {
-      moon: "https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png",
-      sphere: "https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png",
-      lego: "https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png",
-      group: "https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png",
-    },
+    portrait: "/images/potrait.jpg",
+    portraitLabel: "Your portrait here",
+    portraitAlt: "DeFiWolf portrait",
+    decor: { moon: null, sphere: null, lego: null, group: null },
   },
 
   services: {

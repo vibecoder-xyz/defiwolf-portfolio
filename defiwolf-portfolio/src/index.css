@@ -1,18 +1,15 @@
-/* Palette tokens live here only (Tailwind v4 @theme). Utilities like bg-ink, text-mist are generated from them. */
+/* Palette tokens live here only (Tailwind v4 @theme). Utilities like bg-ink, text-mist, border-line are generated from them. */
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0A0C10;
-  --color-mist: #E6EAF0;
-  --color-wolf: #3B82F6;
-  --color-wolf-light: #60A5FA;
-  --color-wolf-mid: #2563EB;
-  --color-wolf-deep: #1E3A8A;
-  --color-paper: #EEF1F5;
-  --color-steel-top: #6B7280;
-  --color-steel-bottom: #C9D3E0;
-  --color-tile-1: #111827;
-  --color-tile-2: #0F1E36;
+  /* Neutrals */
+  --color-ink: #0A0A0A;      /* Background: page, footer */
+  --color-surface: #111111;  /* Surface: cards, popup, marquee tiles, image placeholders */
+  --color-mist: #F5F5F5;     /* Primary text */
+  --color-muted: #8A8A8A;    /* Secondary text */
+  --color-line: #262626;     /* Borders, dividers, scrollbar */
+  --color-paper: #F5F5F5;    /* Services panel (the one light section) */
+
   --font-kanit: "Kanit", sans-serif;
 }
 
@@ -24,27 +21,30 @@ html, body, #root {
   width: 100%;
   scroll-behavior: smooth;
 }
-::selection { background: var(--color-wolf); color: #fff; }
+::selection { background: var(--color-mist); color: var(--color-ink); }
 
+/* Big headings: grey fading to white */
 .hero-heading {
-  background: linear-gradient(180deg, var(--color-steel-top) 0%, var(--color-steel-bottom) 100%);
+  background: linear-gradient(180deg, var(--color-muted) 0%, var(--color-mist) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* Contact button: solid white, black text, thin black inner ring */
 .contact-btn-bg {
-  background: linear-gradient(123deg, var(--color-wolf-deep) 7%, var(--color-wolf-mid) 55%, var(--color-wolf) 100%);
-  color: #fff;
-  box-shadow: 0 4px 20px rgb(59 130 246 / 0.3);
-  outline: 2px solid var(--color-mist);
+  background: var(--color-mist);
+  color: var(--color-ink);
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--color-mist) 15%, transparent);
+  outline: 2px solid var(--color-ink);
   outline-offset: -3px;
 }
+/* Marquee tiles + image placeholders */
 .slot {
-  background: linear-gradient(135deg, var(--color-tile-1), var(--color-tile-2));
-  color: var(--color-wolf-light);
+  background: var(--color-surface);
+  color: var(--color-muted);
 }
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--color-ink); }
-::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #404040; }
+::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-muted); }
